@@ -10,12 +10,9 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class BadgesServiceProvider {
 
-  constructor(public http: HttpClient) {
-    console.log('dasdas');
-  }
+  constructor(public http: HttpClient) {}
 
   getAllBadges() {
-    console.log('adasdasd')
     return this.http.get('http://localhost:3000/badges');
   }
 }

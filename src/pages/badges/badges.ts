@@ -35,8 +35,7 @@ export class BadgesPage {
 
     loader.present();
     return this.badgeService.getAllBadges().subscribe(response => {
-          this.badges_obj = response;
-          console.log(response);
+          this.badges_obj = response.data;
           loader.dismiss();
         },
         error => {
